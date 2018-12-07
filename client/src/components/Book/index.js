@@ -1,5 +1,5 @@
 import React from "react";
-import Row from "../Row";
+import { Row } from "../Grid";
 
 export function UnsavedBook(props){
     // Creates new array containing only unsaed books using the filter method

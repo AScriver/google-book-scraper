@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { SavedBook } from "../Book";
-import { Link } from "react-router-dom";
+import { SavedBook } from "../components/Book";
+// import { Link } from "react-router-dom";
 
 class Saved extends Component {
   state = {
@@ -16,7 +16,7 @@ class Saved extends Component {
   }
 
   getBooks = () => {
-    API.getBook({where: {saved: true}})
+    API.getBook({saved: true})
       .then(res => this.setState({ book: res.data }))
       .catch(err => console.log(err));
   }
